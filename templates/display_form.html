@@ -1,0 +1,22 @@
+{% extends 'search_form.html' %}
+
+{% block display %}
+<br><br>
+<h3>Property information:</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Property ID</th>
+      <th scope="col">Certificate ID</th>
+      <th scope="col">Heating efficiency level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ data.property_id }}</th>
+      <td>{{ data.certificate_id}}</td>
+      <td>{{ data.heat_efficiency_lvl }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
