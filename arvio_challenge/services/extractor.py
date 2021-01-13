@@ -16,8 +16,6 @@ class Extractor:
         stevilka_stavbe = re.findall(r"številka stavbe \d+$", raw_text, re.MULTILINE)[0].split(' ')[2]
         razred_ext = re.findall(r"Razred [A-Z]?\d?", raw_text, re.MULTILINE)
         razred = razred_ext[0].split(' ')[1] if len(razred_ext)>0 else 'N'
-        print(razred_ext)
-        print(razred)
         deli_stavbe =  re.findall(r"deli? stavbe((( \d+(,|\n|$))+(\n|$))?((\d+,( |\n))+(\d+)| \d+)?)$",raw_text,re.MULTILINE)
         deli_stavbe_refactored = [int(x) for x in ','.join(deli_stavbe[0]).strip().replace('\n', ' ').replace(' ', '').split(',') if
                 x != '']

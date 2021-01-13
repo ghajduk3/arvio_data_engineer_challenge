@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render
 from .services.extract_download import extract_and_download
-from .services.CertificatesDbService import getCertificateById
+from .services.certificate_db_service import getCertificateById
 from . import models
 
 def index(request):
