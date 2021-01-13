@@ -20,12 +20,6 @@ docker run -d --name db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres 
 ```
 After the docker container is running rename the .env_example to .env and change the database settings as created in the previous step.
 
-```shell script
-# run the app
-python data_challenge/app.py
-
-# run the tests
-python tests/app_test.py -v # -v is verbose, to show status of each test run  
 ```
 3. After the db is setup database is migrated.
 ```shell script
