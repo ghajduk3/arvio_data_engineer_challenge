@@ -12,4 +12,5 @@ class Downloader:
                 # log error
             return r.content
         except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError) as e:
+            # log error
             print(e)
